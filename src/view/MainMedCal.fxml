@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="menu_navigationBar" fx:id="vboxMain" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClicked" prefHeight="706.0" prefWidth="1276.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainMedCalController">
+  <children>
+    <AnchorPane id="anchorPane" fx:id="mainAnchor" maxHeight="-1.0" maxWidth="-1.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="634.0" prefWidth="1276.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Button id="bottomBtn" fx:id="goBtn" layoutX="201.0" layoutY="672.0" mnemonicParsing="false" onAction="#okToSearch" prefHeight="25.0" prefWidth="25.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="201.0" />
+            <Button id="reloadBtn" fx:id="reloadBtn" layoutX="1235.0" layoutY="672.0" mnemonicParsing="false" onAction="#reloadButton" prefHeight="25.0" prefWidth="25.0" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="16.0" />
+            <Button id="addPatientBtn" fx:id="addPatientBtn" layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleAddPatientButton" prefHeight="25.0" prefWidth="25.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="35.0" />
+            <Button id="removePatientBtn" fx:id="removePatientBtn" layoutX="74.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="25.0" prefWidth="25.0" AnchorPane.topAnchor="35.0" />
+            <Button id="loadDBbtn" fx:id="loadDBbtn" layoutX="134.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleLoadDBbtn" prefHeight="25.0" prefWidth="25.0" AnchorPane.topAnchor="35.0" />
+          <MenuBar id="menuBar" fx:id="menu" layoutY="-1.0" prefHeight="30.0" prefWidth="1276.0">
+            <menus>
+              <Menu mnemonicParsing="false" text="Αρχείο">
+                <items>
+                        <MenuItem fx:id="crtdb" mnemonicParsing="false" onAction="#handleCrtdb" text="Δημιουργία νέας βάσης δεδομένων (αν δεν υπάρχει ήδη)." />
+                        <MenuItem fx:id="loadDbmenuBtn" mnemonicParsing="false" onAction="#handleloadDbmenuBtn" text="Φόρτωση βάσης δεδομένων" />
+                        <MenuItem fx:id="saveDbBtn" mnemonicParsing="false" onAction="#handlesaveDbBtn" text="Αποθήκευση βάσης ως .txt" />
+                        <MenuItem fx:id="refreshBtn" mnemonicParsing="false" onAction="#handlerefreshBtn" text="Ανανέωση" />
+                  <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#handleQuit" text="Έξοδος" />
+                </items>
+              </Menu>
+              <Menu fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#handleAbout" text="Βοήθεια">
+                <items>
+                  <MenuItem fx:id="about" mnemonicParsing="false" text="About MedCal" />
+                </items>
+              </Menu>
+            </menus>
+          </MenuBar>
+            <TextField fx:id="search" layoutX="24.0" layoutY="672.0" prefHeight="25.0" prefWidth="160.0" promptText="Αναζήτηση" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="24.0" />
+            <Button id="loadDBbtn" fx:id="calendarButton" layoutX="1235.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleCalendarButton" prefHeight="25.0" prefWidth="25.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="35.0" />
+            <TableView fx:id="patientsTable" layoutX="14.0" layoutY="92.0" prefHeight="551.0" prefWidth="1274.0" AnchorPane.bottomAnchor="63.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="92.0">
+              <columns>
+                <TableColumn fx:id="pnameColumn" prefWidth="119.0" text="Όνομα" />
+                <TableColumn fx:id="psurnameColumn" prefWidth="166.0" text="Επίθετο" />
+                  <TableColumn fx:id="pamkaColumn" prefWidth="107.0" text="Α.Μ.Κ.Α" />
+                  <TableColumn fx:id="psexColumn" prefWidth="74.0" text="Φύλο" />
+                  <TableColumn fx:id="pdobColumn" prefWidth="150.0" text="Ημερομηνία γέννησης" />
+                  <TableColumn fx:id="pworkColumn" prefWidth="146.0" text="Εργασία" />
+                  <TableColumn fx:id="pplaceOfStayColumn" prefWidth="152.0" text="Τόπος διαμονής" />
+                  <TableColumn fx:id="pdiagnosiColumn" prefWidth="223.0" text="Διάγνωση" />
+                  <TableColumn fx:id="ptilColumn" prefWidth="139.0" text="Τηλέφωνο" />
+              </columns>
+               <contextMenu>
+                  <ContextMenu fx:id="cm">
+                     <items>
+                        <MenuItem fx:id="mi1" mnemonicParsing="false" text="Άνοιγμα καρτέλας ασθενή" />
+                        <MenuItem fx:id="mi2" mnemonicParsing="false" text="Ανανέωση" />
+                        <MenuItem fx:id="mi3" mnemonicParsing="false" text="Διαγραφή" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

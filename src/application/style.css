@@ -1,0 +1,59 @@
+.root {
+    /*-fx-font-size: 16px;*/
+}
+
+.root * {
+    -fx-text-fill: #00008F;
+    -fx-font-family: monospace;
+
+    -fx-max-width: 2000px;
+    -fx-max-height: 2000px;
+
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+
+.weekdayname,
+.weekname {
+    -fx-alignment: center;
+    -fx-background-color: #CBCBE8;
+}
+
+.button {
+    -fx-background-color: #CBE5E5;
+}
+
+.button--prev {
+}
+
+.button--next {
+}
+
+.day {
+    -fx-border-color: black;
+}
+
+.day__name,
+.day__appointment {
+    -fx-alignment: top-center;
+    /*-fx-font-size: 9px;*/
+}
+
+.day__name {
+    -fx-border-color: black;
+}
+
+.list-cell {
+    -fx-padding: 0;
+    -fx-min-height: 0;
+    -fx-background-color: white;
+}
+
+.day__appointment {
+    -fx-border-color: teal;
+    -fx-text-fill: teal;
+}
+
+.day__appointments {
+    -fx-spacing: 1px;
+}

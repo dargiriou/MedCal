@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="809.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PatientRegEditController">
+   <center>
+      <AnchorPane prefHeight="846.0" prefWidth="1007.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="enameField" layoutX="18.0" layoutY="39.0" prefHeight="25.0" prefWidth="274.0" AnchorPane.leftAnchor="17.0" />
+            <DatePicker fx:id="edobPicker" layoutX="330.0" layoutY="39.0" prefHeight="25.0" prefWidth="274.0" />
+            <TextArea fx:id="enososArea" layoutX="608.0" layoutY="39.0" prefHeight="75.0" prefWidth="274.0" AnchorPane.rightAnchor="17.0" />
+            <TextField fx:id="esurnameField" layoutX="18.0" layoutY="112.0" prefHeight="25.0" prefWidth="274.0" AnchorPane.leftAnchor="17.0" />
+            <TextField fx:id="eworkField" layoutX="330.0" layoutY="112.0" prefWidth="274.0" />
+            <TextArea fx:id="ediagnosiArea" layoutX="609.0" layoutY="148.0" prefHeight="56.0" prefWidth="274.0" AnchorPane.rightAnchor="17.0" />
+            <ChoiceBox fx:id="esexChooser" layoutX="18.0" layoutY="183.0" prefHeight="25.0" prefWidth="274.0" AnchorPane.leftAnchor="17.0" />
+            <TextField fx:id="eplaceOfStayField" layoutX="330.0" layoutY="183.0" prefWidth="274.0" />
+            <TextField fx:id="eamkaField" layoutX="18.0" layoutY="254.0" prefHeight="25.0" prefWidth="274.0" AnchorPane.leftAnchor="17.0" />
+            <TextField fx:id="etilField" layoutX="330.0" layoutY="254.0" prefHeight="25.0" prefWidth="274.0" />
+            <TextArea fx:id="epersHistoryArea" layoutX="18.0" layoutY="318.0" prefHeight="77.0" prefWidth="274.0" AnchorPane.leftAnchor="17.0" />
+            <TextArea fx:id="efamHistoryArea" layoutX="330.0" layoutY="318.0" prefHeight="77.0" prefWidth="274.0" />
+            <TextArea fx:id="efarmakaArea" layoutX="608.0" layoutY="254.0" prefHeight="90.0" prefWidth="274.0" AnchorPane.rightAnchor="17.0" />
+            <ChoiceBox fx:id="efarmakachooser" layoutX="641.0" layoutY="354.0" prefHeight="33.0" prefWidth="157.0" />
+            <Button fx:id="efarmakaBtnadd" layoutX="810.0" layoutY="352.0" mnemonicParsing="false" onAction="#ehandleFarmakaAddButton" prefHeight="11.0" prefWidth="25.0" />
+            <Button fx:id="efarmakaBtn" layoutX="865.0" layoutY="352.0" mnemonicParsing="false" onAction="#ehandleFarmakaButton" prefHeight="11.0" prefWidth="25.0" />
+            <Button fx:id="eaddVisit" layoutX="252.0" layoutY="760.0" mnemonicParsing="false" onAction="#ehandleAddVisit" prefHeight="11.0" prefWidth="25.0" AnchorPane.leftAnchor="25.0" />
+            <Button fx:id="eregBtn" layoutX="865.0" layoutY="760.0" mnemonicParsing="false" onAction="#ehandleRegButton" prefHeight="30.0" prefWidth="30.0" />
+            <Label fx:id="labelpat" layoutX="18.0" layoutY="10.0" prefHeight="17.0" prefWidth="69.0" text="Όνομα:" AnchorPane.leftAnchor="17.0" />
+            <Label fx:id="labelpat" layoutX="18.0" layoutY="85.0" prefHeight="17.0" prefWidth="87.0" text="Επώνυμο:" AnchorPane.leftAnchor="17.0" />
+            <Label fx:id="labelpat" layoutX="330.0" layoutY="10.0" prefHeight="17.0" prefWidth="214.0" text="Ημερομηνία Γέννησης:" />
+            <Label fx:id="labelpat" layoutX="330.0" layoutY="153.0" prefHeight="17.0" prefWidth="222.0" text="Τόπος Διαμονής:" />
+            <Label fx:id="labelpat" layoutX="330.0" layoutY="81.0" prefHeight="17.0" prefWidth="139.0" text="Εργασία:" />
+            <Label fx:id="labelpat" layoutX="330.0" layoutY="293.0" prefHeight="17.0" prefWidth="268.0" text="Οικογενειακό ιστορικό:" />
+            <Label fx:id="labelpat" layoutX="18.0" layoutY="293.0" prefHeight="17.0" prefWidth="164.0" text="Ατομικό ιστορικό:" AnchorPane.leftAnchor="17.0" />
+            <Label fx:id="labelpat" layoutX="625.0" layoutY="123.0" prefHeight="17.0" prefWidth="217.0" text="Διάγνωση:" AnchorPane.rightAnchor="74.0" />
+            <Label fx:id="labelpat" layoutX="625.0" layoutY="10.0" prefHeight="17.0" prefWidth="140.0" text="Παρούσα νόσος" AnchorPane.rightAnchor="151.0" />
+            <Label fx:id="labelpat" layoutX="625.0" layoutY="223.0" prefHeight="17.0" prefWidth="92.0" text="Φάρμακα" AnchorPane.rightAnchor="199.0" />
+            <Label fx:id="labelpat" layoutX="18.0" layoutY="157.0" prefHeight="17.0" prefWidth="64.0" text="Φύλο:" AnchorPane.leftAnchor="17.0" />
+            <Label fx:id="labelpat" layoutX="18.0" layoutY="226.0" prefHeight="17.0" prefWidth="92.0" text="A.M.K.A" AnchorPane.leftAnchor="17.0" />
+            <Label fx:id="labelpat" layoutX="330.0" layoutY="222.0" prefHeight="17.0" prefWidth="92.0" text="Τηλέφωνο" />
+            <AnchorPane layoutX="311.0" layoutY="417.0" prefHeight="335.0" prefWidth="579.0">
+               <children>
+                  <TabPane prefHeight="336.0" prefWidth="579.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Σημειώσεις">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="543.0">
+                                 <children>
+                                    <HTMLEditor fx:id="htmlNotes" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="1.0" prefHeight="307.0" prefWidth="577.0" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Σχεδιασμός">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="576.0">
+                                 <children>
+                                    <TextArea fx:id="sxediasmosTxtArea" prefHeight="316.0" prefWidth="581.0" />
+                                    <HTMLEditor fx:id="htmlSxediasmos" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="1.0" prefHeight="307.0" prefWidth="577.0" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="eVisitsTable" layoutX="11.0" layoutY="423.0" prefHeight="331.0" prefWidth="285.0" AnchorPane.leftAnchor="17.0">
+              <columns>
+                <TableColumn fx:id="eDateCol" prefWidth="135.0" text="Ημερομηνία" />
+                  <TableColumn fx:id="eVisitPlaceCol" prefWidth="149.0" text="Περιοχή" />
+              </columns>
+            </TableView>
+            <Label fx:id="labelpat" layoutX="111.0" layoutY="398.0" prefHeight="32.0" prefWidth="97.0" text="Επισκέψεις" textAlignment="CENTER">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="tickBtn" layoutX="311.0" layoutY="763.0" mnemonicParsing="false" onAction="#handletickBtn" prefHeight="11.0" prefWidth="25.0" />
+            <Button fx:id="Xbtn" layoutX="364.0" layoutY="763.0" mnemonicParsing="false" onAction="#handleXbtn" prefHeight="11.0" prefWidth="25.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
